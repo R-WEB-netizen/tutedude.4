@@ -30,3 +30,5 @@ When applying the K-Nearest Neighbors (KNN) algorithm, the model achieved an acc
 the model’s performance improved. This indicates that higher values of k help the model generalize better, 
 likely due to the smoothing effect that reduces the influence of noise in an imbalanced dataset. Therefore,
 it is possible to achieve better accuracy with the KNN model by selecting an appropriate larger value of k.
+
+https://colab.research.google.com/github/R-WEB-netizen/tutedude.4/blob/main/K-nn.ipynb  (google colab link)
