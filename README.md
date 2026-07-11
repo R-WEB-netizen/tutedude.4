@@ -1,46 +1,19 @@
-1. Import and explore the dataset (check for missing values, data types, etc.).
+This completes the "Import and explore the dataset (check for missing values, data types, etc.)" step. After this, you can proceed with data preprocessing (handling missing values and feature scaling).
 
-I mention all import library requred in this task.
-
-
-df.head() --- printing first five rows
+This completes the "Perform data preprocessing (handle missing data, normalize features if necessary)" step. The next step is to split the dataset into training and testing sets.
 
 
-
-df.decribe()-- printing all required number and data
-
-
-df.info() --- printing all information
+These  graphs are commonly used in diabetes prediction projects and are suitable for inclusion in a KNN  assignment report
 
 
-df.isnull().sum()--- checking missing value in data.
+The target variable (Outcome) shows a moderate class imbalance, with approximately 65% non-diabetic and 35% diabetic patients. This imbalance may bias machine learning models toward the majority class, potentially reducing the detection of diabetic patients. Therefore, model performance should be evaluated using metrics such as precision, recall, F1-score, and ROC-AUC, rather than accuracy alone. If necessary, resampling techniques such as SMOTE or class weighting can be applied to improve prediction performance for the minority class.
 
 
-and also printing and checking the median and variance and standard deviation
+The analysis indicates that Glucose, BMI, Age, and DiabetesPedigreeFunction are the most informative features for predicting diabetes. These variables should receive particular attention during model development, while lower-importance features may contribute less to predictive performance depending on the chosen algorithm.
 
-2. Perform data preprocessing (handle missing data, normalize features if necessary).
-
-
-
- I visualize the data in histogram form
+The KNN classifier was evaluated using multiple performance metrics. The ROC curve illustrates the trade-off between the true positive rate and false positive rate across different classification thresholds. The ROC-AUC score summarizes the model's ability to distinguish between diabetic and non-diabetic patients, where values closer to 1 indicate better discrimination. The classification report provides precision, recall, and F1-score for each class, while Cohen's Kappa and Matthews Correlation Coefficient (MCC) offer additional insight into overall classification quality. Log Loss measures the quality of the predicted probabilities, with lower values indicating better-calibrated predictions. These metrics together provide a more comprehensive evaluation than accuracy alone, especially when the class distribution is not perfectly balanced.
 
 
- , correlation heatmap
-
- , scatter plot glucose vs bmi
-
- ,box plot
-
- ,pie chart
-
-
-bar chart (Average glucose by outcome)
-
-Line chart
-
-3. Split the dataset into training and testing sets.
-
-   
 1. Sensitivity to the Value of K
 The performance of KNN depends heavily on the choice of the K value.
 A very small K may lead to overfitting, where the model memorizes noise in the training data.
